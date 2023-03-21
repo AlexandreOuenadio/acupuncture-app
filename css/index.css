@@ -1,0 +1,28 @@
+.main{
+    
+}
+
+.banner{
+    position: relative;
+}
+
+.banner h1{
+    z-index: 2;
+    color: #fff;
+    position: absolute;
+    font-weight: 600;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.banner img{
+    z-index: 1;
+    position: absolute;
+
+    
+}
+
+.section_presentation{
+    padding: var(--S-space) var(--XXL-space);
+    position: relative;
+
+}

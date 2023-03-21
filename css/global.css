@@ -1,0 +1,52 @@
+/* CSS GLOBAL GENERAL QUI CONCERNE TOUTES LES PAGES, A IMPORTER SUR TOUTES LES PAGES ! */
+/* POUR AJOUTER UN CSS SPECIFIQUE A UNE PAGE, ALLEZ SUR SON FICHIER CSS ASSOCIE */
+
+
+/* IMPORTATION DE LA FONT "POPPINS" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+
+
+/* RESET DES STYLES PAR DEFAUT */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURATIONS TYPE COULEURS, FONT-SIZE, SPACING, ETC. QUE L'ON UTILISERA TOUT AU LONG DU DEVELOPPEMENT DU SITE */
+:root{
+    
+    /* JE DEFINIS ICI TOUTES VARIABLES UTILISATIONS AVEC LA FONCTION VAR */
+
+    /* COULEURS */
+    --primaryColor: #dc2f02;
+    --textColor: #212529;
+
+    /* FONTS */
+    font-size: 62.5%;
+    --fontFamily: 'Poppins', sans-serif;
+
+
+    /* SPACING */
+    --S-space: 1.6rem;
+    --L-space: 2.4rem;
+    --XL-space: 3.2rem;
+    --XXL-space: 4.8rem;
+
+}
+
+
+body{
+    font-size: 1.6rem;
+    font-family: var(--fontFamily);
+    color: var(--textColor);
+}
+
+
+
+
+
+

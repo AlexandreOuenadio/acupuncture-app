@@ -1,0 +1,35 @@
+.nav{
+    background-color: var(--primaryColor);
+    padding: var(--S-space) var(--XXL-space);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav h1{
+    font-weight: 600;
+}
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: var(--S-space);
+    font-weight: 500;
+    align-items: center;
+}
+
+.nav-item{
+    font-weight: 500;
+}
+
+.nav-item.login{
+    display: block;
+    padding: var(--S-space) var(--L-space);
+    background-color: black;
+}
+
+.nav-list a:link, .nav-list a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
