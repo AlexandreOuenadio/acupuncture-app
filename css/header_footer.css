@@ -1,3 +1,7 @@
+/* --------- HEADER --------- */
+.header{
+
+}
 .nav{
     background-color: var(--primaryColor);
     padding: var(--S-space) var(--XXL-space);
@@ -5,7 +9,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
+
+
+.nav a:link, .nav a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+
 
 .nav h1{
     font-weight: 600;
@@ -19,17 +31,204 @@
 }
 
 .nav-item{
-    font-weight: 500;
-}
-
-.nav-item.login{
     display: block;
-    padding: var(--S-space) var(--L-space);
-    background-color: black;
+    padding: var(--S-space) var(--L-space); 
+}
+.nav-item.login{
+    background-color: var(--secondaryColor);
+    transition: all .07s;
+
+}
+.nav-item.login:hover, .nav-item.login:focus{
+    background-color: var(--secondaryDarkColor);
 }
 
-.nav-list a:link, .nav-list a:visited{
-    text-decoration: none;
-    color: #fff;
+
+.hamburger{
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+.hamburger-item{
+    background-color: white;
+    height: 0.4rem;
+    border-radius: 5px;
+    transform-origin: 0% 0%;
+    transition: all .4s;
+}
+.nav label{ display: none;}
+.nav input{display: none;}
+.nav #hidden-check:checked ~ label .hamburger .hamburger-item:nth-child(1){
+
+    transform: rotate(45deg) translate(2px, -2px);
+}
+
+.nav #hidden-check:checked ~ label .hamburger .hamburger-item:nth-child(2){
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.2);
+    
+}
+
+.nav #hidden-check:checked ~ label .hamburger .hamburger-item:nth-child(3){
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+@media screen and (max-width: 62rem) { /* 922px de largeur - tablet */
+    .nav-list{
+        display: block;
+        list-style: none;
+        font-weight: 500;
+        position: absolute;
+        bottom: 0;
+        transform: translateY(0);
+        left: 0;
+        width: 100%;
+        background-color: var(--secondaryColor); 
+        z-index: -1;
+        transition: all 0.4s;
+    }
+
+    .nav #hidden-check:checked ~ .nav-list{
+        transform: translateY(100%);
+    }
+
+    .nav-item{
+        text-align: center;
+        padding: var(--S-space);
+    }
+    .nav-item.login{
+        background-color: var(--secondaryDarkColor);
+    }
+
+    .nav-item.login:hover, .nav-item.login:focus{
+        background-color: var(--secondaryDeepDarkColor);
+    }
+    .nav label{
+        display: block;
+    }
+
+    .nav label .hamburger{
+        display: flex;
+    }
+
+
+
+    
+
+
+}
+
+
+
+/* --------- FOOTER --------- */
+
+/*General*/
+footer {
+    background-color: rgb(151, 30, 30);
+    color: rgb(201, 201, 201);
+    max-height: 30rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    border-top: 0.1rem solid rgb(201, 201, 201)
+}
+
+
+/*Footer left*/
+.footer-left {
+    width: 50%;
+    border-right: 0.1rem solid rgb(201, 201, 201)
+}
+
+.footer-title{
+    font-weight: bold;
+    font-size: 120%;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.reference {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+
+/*Footer right*/
+.footer-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-right: 3rem;
+}
+
+li.reference:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /*font-weight: bold;*/
+}
+
+
+
+/*Form*/
+footer form label {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+footer form input[type="email"]{
+    border: none;
+    padding:1rem;
+    width: 100%;
+    background-color: rgb(92, 92, 92);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+
+footer form button[type="submit"] {
+   border: none;
+   background-color: rgb(201, 201, 201);
+   color: rgb(133,39,39);
+   font-size: 1.6rem;
+   padding: 1rem 2rem;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+footer form button[type="submit"]:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(201, 201, 201);
+    outline: solid;
+}
+
+
+
+
+
+
+
+
+
 

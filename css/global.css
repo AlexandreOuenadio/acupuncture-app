@@ -22,8 +22,11 @@
     /* JE DEFINIS ICI TOUTES VARIABLES UTILISATIONS AVEC LA FONCTION VAR */
 
     /* COULEURS */
-    --primaryColor: #dc2f02;
-    --textColor: #212529;
+    --primaryColor: #d00000;
+    --textColor: #212529; 
+    --secondaryColor: #9d0208;
+    --secondaryDarkColor: #6a040f;
+    --secondaryDeepDarkColor: #370617;
 
     /* FONTS */
     font-size: 62.5%;
@@ -43,6 +46,13 @@ body{
     font-size: 1.6rem;
     font-family: var(--fontFamily);
     color: var(--textColor);
+}
+
+
+.container{
+    margin: 0 auto;
+    max-width: 120rem;
+
 }
 
 
