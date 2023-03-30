@@ -10,24 +10,8 @@
         <link rel="stylesheet" href="assets/css/header_footer.css">
     </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <input type="checkbox" id="hidden-check">
-            <a href="#"><h1>LOGO</h1></a>
-            <ul class="nav-list">
-                <a href="#"><li class="nav-item">Pathologie</li></a>
-                <a href="#"><li class="nav-item">Informations</li></a>
-                <a href="#"><li class="nav-item login">Se connecter</li></a>
-            </ul>
-            <label for="hidden-check">
-                <div class="hamburger">
-                    <div class="hamburger-item"></div>
-                    <div class="hamburger-item"></div>
-                    <div class="hamburger-item"></div>
-                </div>
-            </label>
-        </nav>
-    </header>
+    <?php require('templates/header.php'); ?>
+
     <main>
         <div class="banner">
             <!-- Image cliché à placer au début de la page -->
@@ -52,7 +36,7 @@
                 </p>
                 <!-- Photo des membres de l'association -->
                 <img src="assets/images/gaph.png" alt="Photo des membres de l'association" class="section_img">
-                <p class="img_text">
+                <p>
                 Les membres de l'AAIF sont des acupuncteurs qualifiés et expérimentés, qui ont choisi de consacrer leur temps et leurs efforts à cette cause importante. 
                 Ensemble, nous travaillons pour développer des programmes de formation, des initiatives de sensibilisation, et des projets de recherche pour améliorer la compréhension et l'accès à l'acupuncture. 
                 Nous sommes également disponibles pour offrir des consultations et des traitements aux personnes qui souhaitent découvrir les bienfaits de cette pratique millénaire.
@@ -91,7 +75,7 @@
                 <!-- Image d'acupuncure sur le côté  -->
                 <img src="assets/images/acupuncture.jpg" alt="Image d'acupuncture" class="section_img">
                 <!-- Séance d'acupuncture -->
-                <p class="img_text">
+                <p>
                 Lors d'une séance d'acupuncture, le praticien insère des aiguilles très fines à des points spécifiques sur le corps. Les aiguilles sont souvent laissées en place pendant 15 à 30 minutes. 
                 Pendant ce temps, le patient peut ressentir une sensation de picotement ou de pression autour de l'aiguille.
 
@@ -118,7 +102,7 @@
                 </h3>
                 <!-- Les risques de l'acupuncture -->
                 <!-- Photo dynastie Han -->
-                <img src="assets/images/dynastie-han.jpg" alt="Photo représentant la dynasdtie Han" class="section_img">
+                <img src="assets/images/dynastie-han.jpg" alt="Photo représentant la dynasdtie Han">
                 <p>
                 L'acupuncture est considérée comme une thérapie sûre lorsqu'elle est pratiquée par un praticien qualifié et formé. 
                 Cependant, comme pour tout traitement médical, il y a des risques associés à l'acupuncture. Les risques les plus courants sont des ecchymoses, des saignements mineurs et des douleurs au site de l'aiguille.
@@ -128,27 +112,7 @@
                 </div>
         </section>
     </main>
-
-    <footer>
-        <div class = "footer-content">
-        <div class="footer-left">
-            <p class = "footer-title">Contactez nous à: </p>
-            <ul>
-            <li class="reference"><b>Email:</b> compagnie@exemple.com</li>
-            <li class="reference"><b>Téléphone:</b> 01 02 03 04 05</li>
-            <li class="reference"><b>Adresse:</b> 1 Avenue Test, 69000 Lyon </li>
-            </ul> 
-        </div>
-        <div class="footer-right">
-            <form>
-            <label for="email-input"> Envie d'un clou dans le dos? </label>
-            <input type="email" name="email" placeholder="Email" required>
-            <button type="submit"> Oui </button>
-            </form>
-        </div>
-        </div>
-    </footer>
-      
+      <?php require('templates/footer.php'); ?>
 </body>
 
 
