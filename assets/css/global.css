@@ -49,11 +49,18 @@ body{
 }
 
 
+strong{
+    font-weight: 500;
+}
+
+
 .container{
     margin: 0 auto;
     max-width: 120rem;
+    padding: 0 3.2rem;
 
 }
+
 
 
 

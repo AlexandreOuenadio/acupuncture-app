@@ -1,6 +1,6 @@
 /* --------- HEADER --------- */
 .header{
-
+    
 }
 .nav{
     background-color: var(--primaryColor);
@@ -10,6 +10,8 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    height: 8rem;
+    z-index: 1000;
 }
 
 
@@ -19,8 +21,9 @@
 }
 
 
-.nav h1{
-    font-weight: 600;
+.nav-logo{
+    height: 5rem;
+    transform: translateY(8px);
 }
 .nav-list{
     display: flex;
@@ -78,23 +81,132 @@
     transform: rotate(-45deg) translate(-1px, 1px);
 }
 
+
+
+
+
+/* --------- FOOTER --------- */
+
+/*General*/
+.footer {
+    background-color: var(--secondaryColor);
+    color: rgb(201, 201, 201);
+}
+
+.footer-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10rem 0;
+    border-top: 0.1rem solid rgb(201, 201, 201);
+    gap: 5rem;
+}
+
+.footer-title{
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+
+/*Footer left*/
+.footer-left {
+    border-right: 0.2rem solid rgb(201, 201, 201);
+}
+
+.footer-left ul{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+
+
+.reference {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.reference strong{
+    margin-right: 1.6rem;
+}
+
+
+/*Footer right*/
+.footer-right {
+    text-align: center;
+}
+
+
+
+.footer ul li {
+    margin-right: 3rem;
+}
+
+li.reference:hover{
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    /*font-weight: bold;*/
+}
+
+
+
+/*Form*/
+.footer form label {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.footer form input[type="email"]{
+    border: none;
+    padding: 1rem;
+    background-color: rgb(92, 92, 92);
+    flex: 8;
+}
+
+
+.footer form button[type="submit"] {
+   border: none;
+   background-color: rgb(201, 201, 201);
+   color: rgb(133,39,39);
+   padding: 1rem 2rem;
+   cursor: pointer;
+   transition: background-color 0.3s;
+   flex: 1;
+}
+
+.footer form button[type="submit"]:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(201, 201, 201);
+    outline: solid;
+}
+
+.contact-box{
+    display: flex;
+
+}
+
+/* -------- MEDIA QUERIES -------- */
+
 @media screen and (max-width: 62rem) { /* 922px de largeur - tablet */
     .nav-list{
         display: block;
         list-style: none;
         font-weight: 500;
         position: absolute;
-        bottom: 0;
-        transform: translateY(0);
-        left: 0;
+        top: 8rem;
+        left: -100%;
         width: 100%;
         background-color: var(--secondaryColor); 
-        z-index: -1;
         transition: all 0.4s;
+        
     }
 
     .nav #hidden-check:checked ~ .nav-list{
-        transform: translateY(100%);
+       left: 0;
     }
 
     .nav-item{
@@ -116,113 +228,30 @@
         display: flex;
     }
 
+   
+
+    .footer-content{
+
+        grid-template-columns: 1fr;
+    }
+
+    .footer-left{
+        border: none;
+        border-bottom: 0.2rem solid #fff;
+        padding-bottom: 5rem;
+    }
+
+    .footer-left ul{
+        align-items: center;
+    }
+
+
 
 
     
 
 
 }
-
-
-
-/* --------- FOOTER --------- */
-
-/*General*/
-footer {
-    background-color: rgb(151, 30, 30);
-    color: rgb(201, 201, 201);
-    max-height: 30rem;
-}
-
-.footer-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5%;
-    border-top: 0.1rem solid rgb(201, 201, 201)
-}
-
-
-/*Footer left*/
-.footer-left {
-    width: 50%;
-    border-right: 0.1rem solid rgb(201, 201, 201)
-}
-
-.footer-title{
-    font-weight: bold;
-    font-size: 120%;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.reference {
-    display: block;
-    margin-bottom: 1rem;
-}
-
-
-
-/*Footer right*/
-.footer-right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-footer ul{
-    list-style: none;
-    padding: 0;
-    margin: 0 0 0;
-    display: flex;
-}
-
-footer ul li {
-    margin-right: 3rem;
-}
-
-li.reference:hover{
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    /*font-weight: bold;*/
-}
-
-
-
-/*Form*/
-footer form label {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-}
-
-footer form input[type="email"]{
-    border: none;
-    padding:1rem;
-    width: 100%;
-    background-color: rgb(92, 92, 92);
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-
-
-footer form button[type="submit"] {
-   border: none;
-   background-color: rgb(201, 201, 201);
-   color: rgb(133,39,39);
-   font-size: 1.6rem;
-   padding: 1rem 2rem;
-   cursor: pointer;
-   transition: background-color 0.3s;
-}
-
-footer form button[type="submit"]:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(201, 201, 201);
-    outline: solid;
-}
-
 
 
 

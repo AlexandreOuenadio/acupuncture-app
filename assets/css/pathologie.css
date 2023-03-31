@@ -1,0 +1,82 @@
+.search{
+
+    padding: 5rem 0;
+
+}
+
+.search-title{
+    margin: 1.6rem 0;
+    text-align: center;
+    letter-spacing: -0.8px;
+    font-size: 3.2rem;
+
+}
+
+.form-search{
+    
+}
+
+.search-criteria-box{
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.search-criteria-title{
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+}
+
+.search-criteria{
+
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 3rem;
+}
+
+.criteria{
+    display: flex;
+    gap: 1.6rem;
+}
+
+.search-bar-box{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+
+.search-bar{
+    border: 1px solid black;
+    padding: 1em;
+    flex: 3;
+    border-right: none;
+ 
+}
+
+
+
+
+.submit-btn{
+    border: 1px solid black;
+    flex: 1;
+    padding: 1em;
+    border-left: none;
+    cursor: pointer;
+
+}
+
+.liste-pathologies{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.pathologie-item{
+    background-color: grey;
+    height: 10rem;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
