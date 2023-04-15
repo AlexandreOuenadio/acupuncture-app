@@ -61,6 +61,30 @@ strong{
 
 }
 
+.toTopArrow{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--secondaryDarkColor);
+    border: none;
+    transform: translate(-2rem, -2rem);
+    z-index: 800;
+    visibility: hidden;
+    transition: 0.1s all;
+    filter: opacity(0.2);
+}
+
+.toTopArrow:hover, .toTopArrow:focus{
+    filter: opacity(1);
+
+}
+
 
 
 

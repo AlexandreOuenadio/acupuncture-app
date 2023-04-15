@@ -1,0 +1,176 @@
+.main-login-register{
+  padding: 7rem 0;
+}
+
+.login-register-form-container{
+  margin: 0 auto;
+  max-width: 70rem;
+  min-height: calc(100vh - 22rem);
+  background-color: white;
+  border-top: 10px solid var(--primaryColor);
+  padding: 4rem 6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  overflow: hidden;
+
+}
+.login-register-choices-container{
+  display: flex;
+  justify-content: center;
+}
+.login-register-choices{
+ 
+  margin-bottom: 4rem;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 0 3px 13px rgba(0,0,0,0.2);
+ 
+}
+
+.login-register-choice{
+  cursor: pointer;
+  border: none;
+  padding: 1em;
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.login-register-choice.active{
+  color: white;
+}
+
+.login-register-choice-cursor{
+  z-index: 5;
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: -5rem;
+  background-color: var(--primaryColor);
+  border-radius: 50px;
+  transition: 0.3s all;
+}
+
+.login-register-form-switch-container{
+  position: relative;
+}
+
+.login-register-form{
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  transition: 0.3s all;
+}
+
+#login-form{
+  left: calc(-100% - 6rem);
+}
+#login-form.active{
+  left: 0;
+}
+
+#signup-form{
+  left: calc(100% + 6rem);
+}
+
+#signup-form.active{
+  left: 0;
+}
+
+.login-register-form-item{
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+}
+
+.login-register-form-item label{
+
+  font-weight: 600;
+
+}
+
+.login-register-form-item input{
+  
+  outline: none;
+  border: 3px solid #dee2e6;
+  border-radius: 5px;
+
+}
+
+#login-form .login-register-form-item input{
+  padding: 1em;
+}
+
+#signup-form .login-register-form-item input{
+  padding: 0.5em;
+}
+
+
+.login-register-form-item input:focus{
+  background-color: #e9ecef;
+}
+
+
+.login-register-form-password-item{
+  position: relative;
+}
+
+.login-register-form-password-item input{
+  width: 100%;
+}
+
+/* Style oeil du mot de passe */
+
+.password-icon{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-45%);
+  padding: 2rem;
+}
+
+.password-icon:hover {
+  cursor: pointer;
+  color: #ff4754;
+}
+
+.password-icon .eye-off {
+  display: none;
+}
+
+.login-register-form-sumbit-btn{
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primaryColor);
+  text-transform: uppercase;
+  color: white;
+  transition: 0.07s all;
+  font-family: inherit;
+
+}
+
+#login-form .login-register-form-sumbit-btn{
+  padding: 1em;
+}
+
+#signup-form .login-register-form-sumbit-btn{
+  padding: 0.5em;
+}
+
+.login-register-form-sumbit-btn:hover, .login-register-form-sumbit-btn:focus{
+  background-color: var(--secondaryColor);
+}

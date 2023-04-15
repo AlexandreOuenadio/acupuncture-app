@@ -1,16 +1,19 @@
 /* --------- HEADER --------- */
 .header{
-    
+    height: 8rem;
+    background-color: var(--primaryColor);
+    display: flex;
+    align-items: center;
 }
 .nav{
-    background-color: var(--primaryColor);
+    flex: 1;
     padding: var(--S-space) var(--XXL-space);
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    height: 8rem;
+    
     z-index: 1000;
 }
 
@@ -40,6 +43,7 @@
 .nav-item.login{
     background-color: var(--secondaryColor);
     transition: all .07s;
+    border-radius: 5px;
 
 }
 .nav-item.login:hover, .nav-item.login:focus{
@@ -89,21 +93,22 @@
 
 /*General*/
 .footer {
-    background-color: var(--secondaryColor);
-    color: rgb(201, 201, 201);
+    background-color: #9d0208;
+    color: white;
+    
 }
 
 .footer-content{
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 10rem 0;
-    border-top: 0.1rem solid rgb(201, 201, 201);
+    border-top: 0.15rem solid rgb(201, 201, 201);
     gap: 5rem;
 }
 
 .footer-title{
     font-weight: 400;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 3rem;
     text-align: center;
 }
@@ -127,6 +132,9 @@
 .reference {
     display: block;
     margin-bottom: 1rem;
+    cursor: pointer;
+    color: #ced4da;
+    
 }
 
 .reference strong{
@@ -147,7 +155,7 @@
 
 li.reference:hover{
     color: rgb(255, 255, 255);
-    cursor: pointer;
+    
     /*font-weight: bold;*/
 }
 
@@ -155,7 +163,7 @@ li.reference:hover{
 
 /*Form*/
 .footer form label {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     display: block;
     margin-bottom: 3rem;
 }
@@ -163,29 +171,41 @@ li.reference:hover{
 .footer form input[type="email"]{
     border: none;
     padding: 1rem;
-    background-color: rgb(92, 92, 92);
+    background-color: white;
     flex: 8;
+    outline: none;
 }
 
+.footer form input[type="email"]:focus{
+    background-color: #e9ecef;
+}
 
 .footer form button[type="submit"] {
    border: none;
-   background-color: rgb(201, 201, 201);
-   color: rgb(133,39,39);
+   background-color: var(--secondaryColor);
+   color: white;
+   font-weight: 600;
    padding: 1rem 2rem;
    cursor: pointer;
-   transition: background-color 0.3s;
+   transition: background-color 0.07s;
    flex: 1;
+   font-family: inherit;
 }
 
-.footer form button[type="submit"]:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(201, 201, 201);
-    outline: solid;
+
+
+
+
+.footer form button[type="submit"]:hover, .footer form button[type="submit"]:focus {
+    background-color: var(--primaryColor);
+
+
+
 }
 
 .contact-box{
     display: flex;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
 
 }
 
