@@ -1,0 +1,25 @@
+#--------------------------------------------------
+# Répertoire : /
+#--------------------------------------------------
+
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+
+RewriteRule /   /?page=accueil [L]
+RewriteRule /login   /?page=login[L]
+RewriteRule /pathologie   /?page=pathologie [L]
+ErrorDocument 404 /exception/404.php
+
+
+
+# if url ends with .php or .php/, show custom 404 page
+RewriteCond %{REQUEST_URI} !^/views/404\.php$ [NC]
+RewriteRule \.php/?$ /?page=404 [NC,L]

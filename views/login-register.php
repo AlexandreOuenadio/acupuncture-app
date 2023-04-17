@@ -1,17 +1,6 @@
 
-
-<?php
-
-    if(isset($_GET['deconnexion'])){ 
-
-        if($_GET['deconnexion']==true){ 
-            session_unset();
-            header("location:login.php");
-        }
-    }
-?>
-
 <?php require(join(DIRECTORY_SEPARATOR, [__DIR__,'partials', 'header.php'])); ?>
+
 <main class="main-login-register">
     <div class="container">
         <!-- Zone où se connecter -->
@@ -25,7 +14,7 @@
                 </div>
             </div>
             <div class="login-register-form-switch-container">
-                <form id="login-form" class="login-register-form active" action="verification.php" method="POST">
+                <form id="login-form" class="login-register-form active" action="../controllers/login-verification.php" method="POST">
                     <div class="login-register-form-item">
                         <label for="login-username">Nom d'utilisateur</label>
                         <input type="text" id="login-username" placeholder="Entrer votre nom d'utilisateur" name="login-username" required>
@@ -49,7 +38,7 @@
                     <?php }}?>
                 </form>
     
-                <form id="signup-form" class="login-register-form" action="verification.php" method="POST">
+                <form id="signup-form" class="login-register-form" action="" method="POST">
                     <div class="login-register-form-item">
                         <label for="signup-username">Nom d'utilisateur</label>
                         <input type="text" id="signup-username" placeholder="Entrer votre nom d'utilisateur" name="signup-username" required>
@@ -66,11 +55,19 @@
                     </div>
                     <button class="login-register-form-sumbit-btn">S'enregistrer</button>
                     
-                    <?php if(isset($_GET['erreur'])){
+                    <?php
+                    if(isset($_GET['erreur'])){
                         $err = $_GET['erreur'];
-                        if($err==1 || $err==2) { ?>
-                            <p style='color:red'>Utilisateur ou mot de passe incorrect</p>
-                    <?php }}?>
+                        if($err==1)
+                            echo "<p style='color:red'>Utilisateur déjà existant</p>";
+                        elseif($err==2)
+                            echo "<p style='color:red'>Mail déjà associé à un compte</p>";
+                        elseif($err==3)
+                            echo "<p style='color:red'>Mot de passe ne respectant pas les règles</p>";
+                        elseif($err==4)
+                            echo "<p style='color:red'>Mots de passe différents</p>";
+                        }
+                    ?>
                 </form>
             </div>
 
@@ -82,7 +79,7 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="assets/js/login.js"></script>
+<script src="assets/js/switchLoginSignUp.js"></script>
 
 
 

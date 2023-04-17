@@ -174,3 +174,21 @@
 .login-register-form-sumbit-btn:hover, .login-register-form-sumbit-btn:focus{
   background-color: var(--secondaryColor);
 }
+
+
+
+/* MEDIA QUERIES */
+
+/* 992px - tablet */
+@media  screen and (max-width: 62rem) { 
+  .login-register-choice{
+    font-size: 1.4rem;
+  }
+}
+
+/* 576px - mobile */
+@media  screen and (max-width: 36rem){
+  .login-register-choice{
+    font-size: 1.2rem;
+  }
+}

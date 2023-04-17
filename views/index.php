@@ -1,20 +1,3 @@
-<?php
-$user = 'Se connecter';
-$deconnexion = 'false';
-$link = 'login.php';
-if(session_status() !== PHP_SESSION_ACTIVE){
-    @session_start();
-}
-if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
-    $user = $_SESSION['username'];
-    $deconnexion = 'true';
-    $link = 'pathologie.php';
-    }
-
-
-?>
-    
-    
 
 <?php require(join(DIRECTORY_SEPARATOR, [__DIR__,'partials', 'header.php'])); ?>
 <button class="toTopArrow" id="to-top-arrow">

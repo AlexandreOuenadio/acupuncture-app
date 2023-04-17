@@ -1,5 +1,6 @@
   
 <?php require(join(DIRECTORY_SEPARATOR, [__DIR__,'partials', 'header.php'])); ?> 
+
 <button class="toTopArrow" id="to-top-arrow">
     <ion-icon name="arrow-up-outline" class="arrow-icon"></ion-icon>
 </button> 

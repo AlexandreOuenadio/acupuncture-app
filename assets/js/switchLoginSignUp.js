@@ -29,7 +29,7 @@ switchToLoginBtn.addEventListener('click', ()=>{
   loginForm.classList.add('active');
   switchToSignUpBtn.classList.remove('active');
   signUpForm.classList.remove('active');
-  cursorChoice.style.left = "-5rem";
+  cursorChoice.style.left = window.innerWidth > 992 ? "-5rem" : "-4rem";
 })
 
 switchToSignUpBtn.addEventListener('click', ()=>{
@@ -37,5 +37,5 @@ switchToSignUpBtn.addEventListener('click', ()=>{
   signUpForm.classList.add('active');
   switchToLoginBtn.classList.remove('active');
   loginForm.classList.remove('active');
-  cursorChoice.style.left = "14rem";
+  cursorChoice.style.left = window.innerWidth > 992 ? "14rem" : "10rem";
 })

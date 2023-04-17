@@ -50,6 +50,97 @@
     background-color: var(--secondaryDarkColor);
 }
 
+.nav-item.user-logged{
+
+    
+
+}
+
+.user-logged-icon{
+  
+    
+    
+}
+.user-logged{
+    position: relative;
+}
+.user-logged p{
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+    background-color: var(--secondaryColor);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-logged-menu.active{
+    visibility: visible;
+}
+
+.user-logged-menu{
+    padding: 3rem 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    list-style: none;
+    background-color: white;
+    color: var(--textColor);
+    transform: translate(-70%,106%);
+    width: 25rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    gap: 2rem;
+    font-weight: normal;
+}
+
+.user-logged-menu::before{
+    position: absolute;
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    top: 0;
+    left: 82%;
+    transform: translateX(-82%) rotate(45deg);
+    background-color: white;
+    z-index: -1;
+}
+
+.user-logged-menu hr{
+    height: 1px;
+    background-color: #e7e7e9;
+    width: 80%;
+    margin: 1rem auto;
+
+
+}
+
+.user-logged-menu-item{
+    padding: 1rem 3rem;
+    transition: 0.1s all;
+    
+}
+.user-logged-menu-item:hover{
+    background-color: #e9ecef;
+}
+
+.user-logged-menu a:visited, .user-logged-menu a:link{
+    color: var(--textColor);
+
+}
+
+.user-logged-menu button{
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    background-color: inherit;
+}
+
 
 .hamburger{
     cursor: pointer;
@@ -84,6 +175,8 @@
 .nav #hidden-check:checked ~ label .hamburger .hamburger-item:nth-child(3){
     transform: rotate(-45deg) translate(-1px, 1px);
 }
+
+
 
 
 
@@ -212,6 +305,8 @@ li.reference:hover{
 /* -------- MEDIA QUERIES -------- */
 
 @media screen and (max-width: 62rem) { /* 922px de largeur - tablet */
+
+    /* HEADER */
     .nav-list{
         display: block;
         list-style: none;
@@ -224,6 +319,7 @@ li.reference:hover{
         transition: all 0.4s;
         
     }
+
 
     .nav #hidden-check:checked ~ .nav-list{
        left: 0;
@@ -248,7 +344,29 @@ li.reference:hover{
         display: flex;
     }
 
-   
+    .user-logged{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .user-logged p{
+        background-color: var(--secondaryDarkColor);
+    }
+
+    .user-logged-menu{
+        visibility: visible;
+        position: static;
+        transform: translate(0);
+    }
+
+    .user-logged-menu::before{
+
+        content: none;
+
+    }
+
+   /* FOOTER */
 
     .footer-content{
 

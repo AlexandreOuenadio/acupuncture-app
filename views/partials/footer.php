@@ -21,5 +21,9 @@
             </div>
         </div>
     </footer>
+
+    <?php if($userConnected): ?>
+        <script src="/assets/js/userLoggedMenu.js"></script>
+    <?php endif; ?>
 </body>
 </html>
