@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page_title }}</title>
+        <link rel="icon" type="image/x-icon" href="src/assets/images/favicon.ico">
+        <link rel="stylesheet" href="src/assets/css/global.css">
+        <link rel="stylesheet" href="src/assets/css/header_footer.css">
+        <link rel="stylesheet" href="src/assets/css/{{ page_css_file }}">
+        
+    </head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <input type="checkbox" id="hidden-check">
+            <a href="/"><img src="src/assets/images/logo.png" alt="Logo de l'association" class="nav-logo"></a>
+            <ul class="nav-list">
+                <a href="/pathologie"><li class="nav-item">Pathologie</li></a>
+                <a href="/info"><li class="nav-item">Informations</li></a>
+                {% if not userConnected %}
+                    <a href="/auth"><li class="nav-item login">Se connecter</li></a>
+                {% else %}
+                    <li class="nav-item">
+                        <div class="user-logged">
+                            <p id="user-logged-icon">G</p>
+                            <!-- <p id="user-logged-icon"><?= strtoupper(substr(htmlspecialchars($_SESSION['username']),0,1)) ?></p> -->
+                            <ul class="user-logged-menu" id="user-logged-menu">
+                                <a href=""><li class="user-logged-menu-item">Mon compte</li></a>
+                                <hr>
+                                <form action="/auth/logout" method="POST">
+                                    <input type="hidden" name="user-disconnect" value="1">
+                                    <button><li class="user-logged-menu-item">Se déconnecter</li></button>
+                                </form>
+                               
+                            </ul>
+                        </div>
+                    </li>
+                {% endif %}
+            </ul>
+            <label for="hidden-check">
+                <div class="hamburger">
+                    <div class="hamburger-item"></div>
+                    <div class="hamburger-item"></div>
+                    <div class="hamburger-item"></div>
+                </div>
+            </label>
+        </nav>
+    </header>

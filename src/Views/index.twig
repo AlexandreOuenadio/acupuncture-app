@@ -1,0 +1,131 @@
+{% extends 'layout.twig' %}
+
+{% block main %}
+<button class="toTopArrow" id="to-top-arrow">
+    <ion-icon name="arrow-up-outline" class="arrow-icon"></ion-icon>
+</button>   
+<main>
+    <div class="banner">
+        <!-- Image cliché à placer au début de la page -->
+        <h1>Association des Acupuncteurs Indépendants <br> de Franche-Comté</h1>
+        <button class="animated-arrow-down-btn" id="animated-arrow">
+            <ion-icon name="arrow-down-outline" class="arrow-icon"></ion-icon>
+        </button>
+        
+    </div>
+    <div class="sections_home" id="whoweare">
+        <section class="section_home">
+            <div class="container">
+                
+            <!-- Titre première section -->
+                <h2 class="section_title">
+                    Qui sommes nous ?
+                </h2>
+                <!-- Première section texte -->
+                <div class="section_grid">
+                    <div class="img_box">
+                        <!-- Photo des membres de l'association -->
+                        <img src="src/assets/images/gaph.png" alt="Photo des membres de l'association" class="section_img section_img_members">
+                    </div>
+                    <p class="section_paragraph">
+                        L'Association des Acupuncteurs Indépendants de Franche-Comté (AAIF), une organisation française qui se consacre à promouvoir l'accessibilité de l'acupuncture pour tous. Les membres de l'AAIF sont des acupuncteurs qualifiés et expérimentés qui travaillent ensemble pour développer des programmes de formation, des initiatives de sensibilisation et des projets de recherche pour améliorer l'accès à cette pratique millénaire. L'objectif de l'AAIF est de rendre l'acupuncture accessible à tous en travaillant sans relâche pour réaliser cette vision.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section_home">
+        <!-- Titre seconde section -->
+            <div class="container">
+                <h2 class="section_title">
+                    Mais d'ailleurs, c'est quoi l'acupuncture ?
+                </h2>
+                <!-- Section sur "Qu'est ce que l'acupuncture ?" -->
+                <p class="section_paragraph">
+                    L'acupuncture est une méthode thérapeutique traditionnelle chinoise qui utilise des aiguilles très fines pour stimuler des points spécifiques sur le corps. 
+                    Cette pratique est basée sur la théorie que l'énergie vitale, ou Qi, circule dans des canaux appelés méridiens. 
+                    Lorsque le Qi est bloqué ou déséquilibré, cela peut causer des problèmes de santé.
+                </p>
+                <div class="subsection_home">
+                    <!-- Sous-chapitre 1 -->
+                    <h3 class="section_subtitle">
+                        Histoire de l'acupuncture
+                    </h3>
+                    <!-- L'histoire de l'acûpuncture  -->
+                    <div class="section_grid">
+                        <p class="section_paragraph">
+                            L'acupuncture remonte à plus de 2000 ans en Chine. Les premières références écrites à l'acupuncture datent de la dynastie Han (206 avant JC - 220 après JC). 
+                            Cependant, l'acupuncture a continué à évoluer et à se développer au fil des siècles. Elle est devenue plus populaire en Occident dans les années 1970.
+                        </p>
+                        <!-- Photo dynastie Han -->
+                        <div class="img_box">
+                            <img src="src/assets/images/dynastie-han.jpg" alt="Photo représentant la dynasdtie Han" class="section_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="subsection_home">
+                    <!-- Sous-chapitre 2 -->
+                    <h3 class="section_subtitle">
+                    Comment se déroule une séance d'acupuncture ?
+                    </h3>
+                    <div class="section_grid">
+                        <div class="img_box">
+                            <!-- Image d'acupuncure sur le côté  -->
+                            <img src="src/assets/images/acupuncture.jpg" alt="Image d'acupuncture" class="section_img">
+                        </div>
+                        <!-- Séance d'acupuncture -->
+                        <p class="section_paragraph">
+                            Lors d'une séance d'acupuncture, le praticien insère des aiguilles très fines à des points spécifiques sur le corps. Les aiguilles sont souvent laissées en place pendant 15 à 30 minutes. 
+                            Pendant ce temps, le patient peut ressentir une sensation de picotement ou de pression autour de l'aiguille.
+            
+                            Le nombre de séances d'acupuncture nécessaires dépend du problème de santé traité et de la réponse du patient au traitement. 
+                            Certaines personnes peuvent avoir besoin de plusieurs séances par semaine, tandis que d'autres peuvent avoir besoin de moins de séances.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="subsection_home">
+                    <!-- Sous-chapitre 3 -->
+                    <h3 class="section_subtitle">
+                    Les bienfaits de l'acupuncture
+                    </h3>
+                    <!-- Les bienfaits de l'acupuncture-->
+                    <p class="section_paragraph">
+                        L'acupuncture peut être utilisée pour traiter une variété de problèmes de santé, notamment :
+                    </p>
+                    <ul class="section_list">
+                        <li class=section_list_bullet> <strong> Douleurs chroniques </strong> : l'acupuncture peut aider à soulager les douleurs chroniques, notamment les douleurs dorsales, les douleurs de tête et les douleurs articulaires.</li>
+                        <li class=section_list_bullet> <strong> Troubles du sommeil </strong>: l'acupuncture peut aider à améliorer la qualité du sommeil et à réduire l'insomnie.</li>
+                        <li class=section_list_bullet> <strong>Troubles émotionnels </strong>: l'acupuncture peut aider à traiter la dépression, l'anxiété et le stress.</li>
+                        <li class=section_list_bullet> <strong> Troubles digestifs </strong> : l'acupuncture peut aider à soulager les maux d'estomac, la constipation et les nausées.</li>
+                    </ul>
+                </div>
+                <div class="subsection_home">
+                    <!-- Sous-chapitre 4 -->
+                    <h3 class="section_subtitle">
+                    Les risques associés à l'acupuncture
+                    </h3>
+                    <!-- Les risques de l'acupuncture -->
+                    <p class="section_paragraph">
+                        L'acupuncture est considérée comme une thérapie sûre lorsqu'elle est pratiquée par un praticien qualifié et formé. 
+                        Cependant, comme pour tout traitement médical, il y a des risques associés à l'acupuncture. Les risques les plus courants sont des ecchymoses, des saignements mineurs et des douleurs au site de l'aiguille.
+        
+                        Il est important de discuter de tous les risques et avantages potentiels de l'acupuncture avec un médecin avant de commencer le traitement.
+                    <p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock main %}
+
+{% block jsFiles %}
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="src/assets/js/animatedArrow.js"></script>
+<script src="src/assets/js/toTopArrow.js"></script> 
+
+{% endblock %}
+
+

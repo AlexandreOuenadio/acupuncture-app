@@ -1,0 +1,83 @@
+{% extends 'layout.twig' %}
+
+{% block main %}
+<button class="toTopArrow" id="to-top-arrow">
+    <ion-icon name="arrow-up-outline" class="arrow-icon"></ion-icon>
+</button> 
+<main>
+    <section class="search">
+
+      <div class="container">
+        <h2 class="search-title">Rechercher une pathologie</h2>
+        <form action="/pathologie" method="POST" class="form-search">
+          <div class="search-criteria-box">
+
+            <h3 class="search-criteria-title">Critères de recherche</h3>
+            <div class="search-criteria">
+
+              <div class="criteria">
+                <label for="meridien">Méridien: </label>
+                <select name="meridien[]" id="meridien" multiple>
+                <option value="">Liste de méridiens</option>
+                  {% for meridien in meridiens %}
+                    <option value="{{ meridien.nom }}">{{ meridien.nom }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="criteria">
+                <label for="categorie">Catégorie/type: </label>
+                <select name="categorie" id="categorie">
+                <option value="">Liste de types</option>
+                  {% for type in types %}
+                    <option value="{{ type }}">{{ type }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="criteria">
+                <label for="caracteristiques">Caractéristiques: </label>
+                <select name="caracteristiques[]" id="caracteristiques" multiple>
+                <option value="">Liste de caractéristiques</option>
+                  {% for characteristic in characteristics %}
+                    <option value="{{ characteristic }}">{{ characteristic }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="search-bar-box">
+            <input type="text" name="search-bar" id="search-bar" class="search-bar" placeholder="Symptome" value="{{ keyword }}">
+            <button class="submit-btn"><ion-icon name="search-outline"></ion-icon></button>
+          </div>
+
+        </form>
+
+        <div class="liste-pathologies">
+          {% if pathologies is empty %}
+            <p>Aucune pathologie trouvée.</p>
+          {% else %}
+            {% for pathologie in pathologies %}
+              <div class="pathologie-item">
+                <p>{{ pathologie.desc }}</p>
+              </div>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+      </div>
+    </section>
+  </main>
+{% endblock %}
+
+
+{% block jsFiles %}
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="src/assets/js/toTopArrow.js"></script> 
+
+{% endblock %}
+

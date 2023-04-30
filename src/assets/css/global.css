@@ -1,0 +1,99 @@
+/* CSS GLOBAL GENERAL QUI CONCERNE TOUTES LES PAGES, A IMPORTER SUR TOUTES LES PAGES ! */
+/* POUR AJOUTER UN CSS SPECIFIQUE A UNE PAGE, ALLEZ SUR SON FICHIER CSS ASSOCIE */
+
+
+/* IMPORTATION DE LA FONT "POPPINS" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+
+
+
+/* RESET DES STYLES PAR DEFAUT */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURATIONS TYPE COULEURS, FONT-SIZE, SPACING, ETC. QUE L'ON UTILISERA TOUT AU LONG DU DEVELOPPEMENT DU SITE */
+:root{
+    
+    /* JE DEFINIS ICI TOUTES VARIABLES UTILISATIONS AVEC LA FONCTION VAR */
+
+    /* COULEURS */
+    --primaryColor: #d00000;
+    --textColor: #212529; 
+    --secondaryColor: #9d0208;
+    --secondaryDarkColor: #6a040f;
+    --secondaryDeepDarkColor: #370617;
+
+    /* FONTS */
+    font-size: 62.5%;
+    --fontFamily: 'Poppins', sans-serif;
+
+
+    /* SPACING */
+    --S-space: 1.6rem;
+    --L-space: 2.4rem;
+    --XL-space: 3.2rem;
+    --XXL-space: 4.8rem;
+
+}
+
+
+body{
+    font-size: 1.6rem;
+    font-family: var(--fontFamily);
+    color: var(--textColor);
+}
+
+
+strong{
+    font-weight: 500;
+}
+
+
+.container{
+    margin: 0 auto;
+    max-width: 120rem;
+    padding: 0 3.2rem;
+
+}
+
+/* FLECHE ANIMEE A L'ACCUEIL + TO TOP FLECHE */
+.arrow-icon{
+    font-size: 3.2rem;
+    color: white;
+}
+
+.toTopArrow{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--secondaryDarkColor);
+    border: none;
+    transform: translate(-2rem, -2rem);
+    z-index: 800;
+    visibility: hidden;
+    transition: 0.1s all;
+    filter: opacity(0.2);
+}
+
+.toTopArrow:hover, .toTopArrow:focus{
+    filter: opacity(1);
+
+}
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+{% extends 'layout.twig' %}
+
+{% block main %}
+<button class="toTopArrow" id="to-top-arrow">
+    <ion-icon name="arrow-up-outline" class="arrow-icon"></ion-icon>
+</button>   
+<main>
+    <section class="information">
+        <div class="container">
+            <h2 class="information-title">Informations</h2>
+            <article>
+                <h3 class="information-subtitle">Description du projet</h3>
+                <p class="information-paragraph">
+                    L'objectif du projet était de concevoir et réaliser une plateforme en ligne pour une association d'acupuncteurs afin d'aborder et de comprendre l'ensemble des notions encadrant les techniques de l'Internet Dynamique et de l'architecture logicielle (intégration de maquettes à une base PHP par templating, architecture PHP objet, accès et utilisation d'une base de données et mise en place d'une API REST).
+                </p>
+            </aritcle>
+            <article>
+                <h3 class="information-subtitle">Organisation du site</h3>
+                <p class="information-paragraph">
+                    Nous étions libre de choisir comment organiser notre site mais avions tout de même un cahier des charges décrivant les différentes fonctionnalités que devaient posséder notre site :    
+                </p>
+                <ul>
+                    <li>Disposer d'un service en ligne permettant aux membres de l'association de consulter la liste des symptômes des principales pathologies en acupuncture</li>
+                    <li>Pouvoir afficher uniquement certaines pathologies en fonction de différents critères (type de pathologie, choix des méridiens,etc)</li>
+                    <li>Rechercher les pathologies comportant certains symptômes.</li>
+                </ul>
+                <p class="information-paragraph">
+                    Les pages du site sont les suivantes :    
+                </p>
+                <ul>
+                    <li>Une page d'accueil (avec menu et formulaire)</li>
+                    <li>Une page présentant les pathologies (avec des filtres et accessibles uniquement si l'utilisateur est connecté)</li>
+                    <li>Une page d'information expliquant les étapes de construction du site</li>
+                    <li>Une page de connexion permettant que l'utilisateur puisse créer un compte et/ou se connecter</li>
+                </ul>
+            </article>
+            <article>
+                <h3 class="information-subtitle">Architecture MVC</h3>
+                <p class="information-paragraph">
+                    Notre site possède une architecture MVC (Model, View, Controller). Nous avons développé: <br>
+                    <ul>
+                        <li>Une classe <strong>Router</strong> qui est capable de rediriger des requêtes GET et POST de l'utilisateur (récupération de page, des informations de la base de donnée ou authentication utilisateur), cette dernière appelle sous couche jacente des controlleurs matérialisés par des fonctions.</li>
+                        <li>Des <strong>controlleurs</strong> qui effectuent des actions appelées par le routeur telles que l'affichage d'une page, la connexion d'un utilisateur, ou bien la récupération de données via le Model présentes dans une base de données PostgreSQL.</li>
+                        <li>Une classe <strong>Database</strong> qui représente notre <strong>Model</strong> et qui a pour but de faire des requêtes SQL spécifiques pour la récupération de donnée sur les pathologies ou sur les comptes utilisateurs enregistrés</li>
+                    </ul>
+                    
+                </p>
+            </article>
+            <article>
+                <h3 class="information-subtitle">Nos ajouts suite à la séance d'évaluation</h3>
+                <p class="information-paragraph">
+            
+                    <ul>
+                        <li>Recherche pathologique fonctionnelle</li>
+                        <li>Connexion/Inscription utilisateur avec base de donnée fonctionnelle</li>
+                        <li>Ajout de messages d'erreur sur le formulaire de  connexion et d'inscription utilisateur</li>
+                    </ul>
+                    
+                </p>
+            </article>
+        </div>
+    </section>
+</main>
+{% endblock main %}
+
+{% block jsFiles %}
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="src/assets/js/toTopArrow.js"></script> 
+
+{% endblock %}
+
+

@@ -1,0 +1,73 @@
+    {% extends 'layout.twig' %}
+
+{% block main %}
+
+<main class="main-auth">
+    <div class="container">
+        <!-- Zone où se connecter -->
+        <div class="auth-form-container">
+            <!-- <img class="auth-logo" src="../src/assets/images/logo.png" alt="logo"> -->
+            <div class="auth-choices-container">
+                <div class="auth-choices">
+                    <div class="auth-choice-cursor" id="cursor-choice"></div>
+                    <button class="auth-choice active" id="switch-to-login">Se connecter</button>
+                    <button class="auth-choice" id="switch-to-signup">S'enregistrer</button>
+                </div>
+            </div>
+            {% if erreur is defined %}
+                <div class="error-message">{{erreur}}</div>
+            {% endif %}
+            <div class="auth-form-switch-container">
+                <form id="login-form" class="auth-form active" action="/auth/login" method="POST">
+                    <div class="auth-form-item">
+                        <label for="login-username">Nom d'utilisateur</label>
+                        <input type="text" id="login-username" placeholder="Entrer votre nom d'utilisateur" name="login-username" required>
+                    </div>
+                    <div class="auth-form-item">
+                        <label for="login-password">Mot de passe</label>
+                        <div class="auth-form-password-item">
+                            <input type="password" id="login-password" placeholder="Entrer votre mot de passe" name="login-password" required>
+                            <div class="password-icon">
+                                <ion-icon name="eye-outline" class="eye"></ion-icon>
+                                <ion-icon name="eye-off-outline" class="eye-off"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="auth-form-sumbit-btn">Se connecter</button>
+                </form>
+
+                <form id="signup-form" class="auth-form" action="/auth/register" method="POST">
+                    <div class="auth-form-item">
+                        <label for="signup-username">Nom d'utilisateur</label>
+                        <input type="text" id="signup-username" placeholder="Entrer votre nom d'utilisateur" name="signup-username" required>
+                    </div>
+                    <div class="auth-form-item">
+                        <label for="signup-password">Mot de passe</label>
+                        <div class="auth-form-password-item">
+                            <input type="password" id="signup-password" placeholder="Choisissez un mot de passe" name="signup-password" required>
+                        </div>
+                    </div>
+                    <div class="auth-form-item">
+                        <label for="signup-password2">Confirmation du mot de passe</label>
+                        <input type="password" id="signup-password2" placeholder="Entrer le mot de passe à nouveau" name="signup-password2" required>
+                    </div>
+                    <button class="auth-form-sumbit-btn">S'enregistrer</button>
+                    
+                </form>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
+
+{% block jsFiles %}
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="src/assets/js/toTopArrow.js"></script> 
+<script src="src/assets/js/switchLoginSignUp.js"></script>
+
+{% endblock %}

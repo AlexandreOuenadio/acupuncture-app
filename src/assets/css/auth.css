@@ -1,0 +1,203 @@
+.main-auth{
+  padding: 7rem 0;
+}
+
+.auth-form-container{
+  margin: 0 auto;
+  max-width: 70rem;
+  height: 56rem;
+  background-color: white;
+  border-top: 10px solid var(--primaryColor);
+  padding: 4rem 6rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  overflow: hidden;
+
+}
+.auth-choices-container{
+  display: flex;
+  justify-content: center;
+}
+.auth-choices{
+ 
+  margin-bottom: 4rem;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 0 3px 13px rgba(0,0,0,0.2);
+ 
+}
+
+.auth-choice{
+  cursor: pointer;
+  border: none;
+  padding: 1em;
+  background-color: transparent;
+  z-index: 10;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  border-radius: 50px;
+}
+
+.auth-choice.active{
+  color: white;
+  background-color:var(--primaryColor);
+}
+
+/* .auth-choice-cursor{
+  z-index: 5;
+  height: 100%;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: -20%;
+  background-color: var(--primaryColor);
+  border-radius: 50px;
+  transition: 0.3s all;
+} */
+
+.error-message{
+  margin-bottom:2rem;
+  font-weight:600;
+  color:var(--primaryColor);
+}
+
+
+.auth-form-switch-container{
+  position: relative;
+}
+
+.auth-form{
+  position: absolute;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  transition: 0.3s all;
+}
+
+#login-form{
+  left: calc(-100% - 6rem);
+}
+#login-form.active{
+  left: 0;
+}
+
+#signup-form{
+  left: calc(100% + 6rem);
+}
+
+#signup-form.active{
+  left: 0;
+}
+
+.auth-form-item{
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+}
+
+.auth-form-item label{
+
+  font-weight: 600;
+
+}
+
+.auth-form-item input{
+  
+  outline: none;
+  border: 3px solid #dee2e6;
+  border-radius: 5px;
+
+}
+
+#login-form .auth-form-item input{
+  padding: 1em;
+}
+
+#signup-form .auth-form-item input{
+  padding: 0.5em;
+}
+
+
+.auth-form-item input:focus{
+  background-color: #e9ecef;
+}
+
+
+.auth-form-password-item{
+  position: relative;
+}
+
+.auth-form-password-item input{
+  width: 100%;
+}
+
+/* Style oeil du mot de passe */
+
+.password-icon{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-45%);
+  padding: 2rem;
+}
+
+.password-icon:hover {
+  cursor: pointer;
+  color: #ff4754;
+}
+
+.password-icon .eye-off {
+  display: none;
+}
+
+.auth-form-sumbit-btn{
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primaryColor);
+  text-transform: uppercase;
+  color: white;
+  transition: 0.07s all;
+  font-family: inherit;
+
+}
+
+#login-form .auth-form-sumbit-btn{
+  padding: 1em;
+}
+
+#signup-form .auth-form-sumbit-btn{
+  padding: 0.5em;
+}
+
+.auth-form-sumbit-btn:hover, .auth-form-sumbit-btn:focus{
+  background-color: var(--secondaryColor);
+}
+
+
+
+/* MEDIA QUERIES */
+
+/* 992px - tablet */
+@media  screen and (max-width: 62rem) { 
+  .auth-choice{
+    font-size: 1.4rem;
+  }
+}
+
+/* 576px - mobile */
+@media  screen and (max-width: 36rem){
+  .auth-choice{
+    font-size: 1.2rem;
+  }
+}
